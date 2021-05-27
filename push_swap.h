@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/05/27 19:14:00 by napark            #+#    #+#             */
+/*   Updated: 2021/05/27 19:17:24 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int main(int argc, char *argv[])
-{
-    t_list  *a_list;
-    t_list  *b_list;
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include "libft.h"
 
-    if (argc < 3)
-        
-}
+#endif

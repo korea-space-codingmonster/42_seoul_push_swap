@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
+/*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:37:28 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 15:37:44 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <libft.h>
 
-int main(int argc, char *argv[])
+/*
+** Tests for an ASCII character, any character btw 0 and octal 0177 inclusive.
+** (octal 0177 == decimal 127)
+*/
+
+int		ft_isascii(int c)
 {
-    t_list  *a_list;
-    t_list  *b_list;
-
-    if (argc < 3)
-        
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

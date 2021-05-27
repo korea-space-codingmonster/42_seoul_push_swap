@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:59:03 by napark            #+#    #+#             */
+/*   Updated: 2021/04/28 18:14:18 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <libft.h>
 
-int main(int argc, char *argv[])
+int		ft_strcmp(const char *s1, const char *s2)
 {
-    t_list  *a_list;
-    t_list  *b_list;
+	int i;
 
-    if (argc < 3)
-        
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }

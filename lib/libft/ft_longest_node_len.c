@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_longest_node_len.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
+/*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:41:36 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 15:42:07 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <libft.h>
 
-int main(int argc, char *argv[])
+int		ft_longest_node_len(t_list *lst)
 {
-    t_list  *a_list;
-    t_list  *b_list;
+	int max;
 
-    if (argc < 3)
-        
+	max = -1;
+	while (lst)
+	{
+		if (max < ft_strlen((char *)lst->content))
+			max = ft_strlen((char *)lst->content);
+		lst = lst->next;
+	}
+	return (max);
 }

@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
+/*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:47:51 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 15:48:09 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <libft.h>
 
-int main(int argc, char *argv[])
+/*
+** Counts the number of elements in a list
+*/
+
+int	ft_lstsize(t_list *lst)
 {
-    t_list  *a_list;
-    t_list  *b_list;
+	size_t	size;
 
-    if (argc < 3)
-        
+	size = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		size++;
+	}
+	return (size);
 }

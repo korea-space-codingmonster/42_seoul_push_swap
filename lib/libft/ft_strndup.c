@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
+/*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 16:04:27 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 18:32:50 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <libft.h>
 
-int main(int argc, char *argv[])
+char	*ft_strndup(const char *s1, size_t size)
 {
-    t_list  *a_list;
-    t_list  *b_list;
+	char	*dup;
 
-    if (argc < 3)
-        
+	dup = (char *)malloc(sizeof(char) * (size + 1));
+	if (dup == 0)
+		return (0);
+	ft_strcpy(dup, s1, size);
+	dup[size] = 0;
+	return (dup);
 }

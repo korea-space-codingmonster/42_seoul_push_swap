@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
+/*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:43:15 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 15:43:35 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <libft.h>
 
-int main(int argc, char *argv[])
+/*
+** - Adds the element 'new' at the beginning of the list
+*/
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    t_list  *a_list;
-    t_list  *b_list;
-
-    if (argc < 3)
-        
+	if (lst == 0 || new == 0)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

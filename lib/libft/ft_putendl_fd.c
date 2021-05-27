@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
+/*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:54:54 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 15:55:09 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <libft.h>
 
-int main(int argc, char *argv[])
+/*
+** Outputs the string 's' to the given file descriptor, followed by a newline.
+*/
+
+void	ft_putendl_fd(char *s, int fd)
 {
-    t_list  *a_list;
-    t_list  *b_list;
-
-    if (argc < 3)
-        
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

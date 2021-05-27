@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
+/*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:34:24 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 15:34:40 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <libft.h>
 
-int main(int argc, char *argv[])
+/*
+** - Writes 'n' zeroed bytes to the string 's'.
+** - Does nothing if 'n' is zero.
+*/
+
+void	ft_bzero(void *s, size_t n)
 {
-    t_list  *a_list;
-    t_list  *b_list;
-
-    if (argc < 3)
-        
+	ft_memset(s, 0, n);
 }

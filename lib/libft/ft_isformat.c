@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isformat.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/05/27 19:23:40 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:38:41 by napark            #+#    #+#             */
+/*   Updated: 2021/04/28 18:13:14 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <libft.h>
 
-int main(int argc, char *argv[])
+int	ft_isformat(char *str, char *format)
 {
-    t_list  *a_list;
-    t_list  *b_list;
+	int		len_str;
+	int		len_fmt;
+	char	*fmt_of_str;
 
-    if (argc < 3)
-        
+	len_str = ft_strlen(str);
+	len_fmt = ft_strlen(format);
+	if (len_str <= len_fmt)
+		return (0);
+	fmt_of_str = str + len_str - len_fmt;
+	if (ft_strcmp(fmt_of_str, format) == 0)
+		return (1);
+	return (0);
 }
