@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   go_left.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/11 15:34:24 by napark            #+#    #+#             */
-/*   Updated: 2021/04/11 15:34:40 by napark           ###   ########.fr       */
+/*   Created: 2021/06/16 02:49:08 by napark            #+#    #+#             */
+/*   Updated: 2021/06/16 02:56:52 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "include/push_swap.h"
 
-/*
-** - Writes 'n' zeroed bytes to the string 's'.
-** - Does nothing if 'n' is zero.
-*/
-
-void	ft_bzero(void *s, size_t n)
+void     go_left(int *buffer_a, int buf_a_size)
 {
-	ft_memset(s, 0, n);
+    int i;
+
+    i = 0;
+    while (i < buf_a_size)//'\0'까지임으로 이 전까지
+    {
+        buffer_a[i] = buffer_a[i+1];//마지막은 '\0'유지
+        i++;
+    }
 }

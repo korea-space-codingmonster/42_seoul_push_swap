@@ -6,13 +6,15 @@
 #    By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/15 18:28:26 by napark            #+#    #+#              #
-#    Updated: 2021/06/15 18:46:31 by napark           ###   ########.fr        #
+#    Updated: 2021/06/16 01:47:03 by napark           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = PUSH_SWAP
+NAME = push_swap
 
-SRC = $(wildcard $(src)/*.c)
+src_dir = src
+
+SRC = $(wildcard $(src_dir)/*.c)
 
 CC = gcc
 

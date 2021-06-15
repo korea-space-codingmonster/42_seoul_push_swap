@@ -6,13 +6,13 @@
 /*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 01:22:24 by napark            #+#    #+#             */
-/*   Updated: 2021/06/16 01:34:47 by napark           ###   ########.fr       */
+/*   Updated: 2021/06/16 01:47:55 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 
-int     find_smaller(t_push_swap *buffer)
+static int     find_smaller(t_push_swap *buffer)
 {
     int i;
     int smaller_n;
@@ -28,7 +28,7 @@ int     find_smaller(t_push_swap *buffer)
     return (smaller_n);
 }
 
-int     check_buffer(t_push_swap *buffer)
+static int     check_buffer(t_push_swap *buffer)
 {
     int i;
     int j;
@@ -59,10 +59,16 @@ void    push_swap(t_push_swap   *buffer)
     int smaller;
 
     check_list = check_buffer(buffer);
-    smaller = find_smaller(buffer);//제일 작은 수를 찾는다.
     if(check_list == 0)//정렬되지 않은 수를 넣었을 경우 프로그램 시작
     {
-
+        while (buffer->size_a != 0)
+        {
+            smaller = find_smaller(buffer);//지속적으로 제일 작은 수를 찾는다.
+            while (buffer->length_a[0] != smaller)//제일 작은 smaller가 맨 앞으로 올떄까지 rotation
+            {
+                ra(buffer);
+            }
+        }
     }
 
     
