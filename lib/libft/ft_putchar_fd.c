@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 12:32:08 by napark            #+#    #+#             */
-/*   Updated: 2021/06/17 15:22:06 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:54:15 by napark            #+#    #+#             */
+/*   Updated: 2021/06/17 17:24:21 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
+#include <libft.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include "lib/libft/libft.h"
+/*
+** Outputs the character 'c' to the given file descriptor.
+*/
 
-typedef struct  s_stack
+void	ft_putchar_fd(char c, int fd)
 {
-    struct t_stack *next;
-    struct t_stack *prev;
-    int             content; 
-}               t_stack;
-
-typedef struct  s_push_swap
-{
-    int *a;//a stack
-    int *b;//b stack
-}               t_push_swap;
-
-#endif
+	write(fd, &c, 1);
+}

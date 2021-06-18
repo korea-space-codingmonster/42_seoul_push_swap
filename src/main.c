@@ -3,39 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: napark <napark@student.42.fr>              +#+  +:+       +#+        */
+/*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/06/17 13:12:03 by napark           ###   ########.fr       */
+/*   Updated: 2021/06/17 17:07:08 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int check_ar
-
-int create_stack(int argc, char **argv)
+int     main(int argc, char **argv)
 {
-//./push_swap "2 5 3 4 2"
-//아무것도 입력 안했을때
-//입력부터 정렬되어있는 상태
-//하나만 들어있을 때
-//중복
-//숫자(int)외 다른 문자 (음수가능)
-    t_stack *stack;
+    t_push_swap     data;
+    char    **check;//최종 stack으로 반환받기 위함
+
+    check = check_arg(&argc, argv);//문자열 arg, 개별값 arg값 parsing
+    data.a = set_stack(argc, check);
     
-}
-
-int main(int argc, char **argv)
-{
-    int check;
-    t_push_swap data;
-
-    if (argc < 2)
-        return (0);
-    data.a = create_stack(argc, argv);
-    if (check == 1)
-    {
-        
-    }
 }

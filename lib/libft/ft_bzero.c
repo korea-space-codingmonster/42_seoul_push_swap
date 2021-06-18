@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 12:32:08 by napark            #+#    #+#             */
-/*   Updated: 2021/06/17 15:22:06 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:34:24 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 15:34:40 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
+#include <libft.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include "lib/libft/libft.h"
+/*
+** - Writes 'n' zeroed bytes to the string 's'.
+** - Does nothing if 'n' is zero.
+*/
 
-typedef struct  s_stack
+void	ft_bzero(void *s, size_t n)
 {
-    struct t_stack *next;
-    struct t_stack *prev;
-    int             content; 
-}               t_stack;
-
-typedef struct  s_push_swap
-{
-    int *a;//a stack
-    int *b;//b stack
-}               t_push_swap;
-
-#endif
+	ft_memset(s, 0, n);
+}

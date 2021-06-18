@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 12:32:08 by napark            #+#    #+#             */
-/*   Updated: 2021/06/17 15:22:06 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:53:15 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 15:53:30 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
+#include <libft.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include "lib/libft/libft.h"
+/*
+** - Writes 'len' bytes of value 'c'(converted to unsigned char) to 'b'.
+** - Returns its first argument.
+** - SIZE_T : unsigned type of the result of "sizeof"
+*/
 
-typedef struct  s_stack
+void	*ft_memset(void *b, int c, size_t len)
 {
-    struct t_stack *next;
-    struct t_stack *prev;
-    int             content; 
-}               t_stack;
+	size_t i;
 
-typedef struct  s_push_swap
-{
-    int *a;//a stack
-    int *b;//b stack
-}               t_push_swap;
-
-#endif
+	i = 0;
+	while (i < len)
+	{
+		((unsigned char *)b)[i] = c;
+		i++;
+	}
+	return (b);
+}

@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 12:32:08 by napark            #+#    #+#             */
-/*   Updated: 2021/06/17 15:22:06 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:55:31 by napark            #+#    #+#             */
+/*   Updated: 2021/04/11 15:55:46 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
+#include <libft.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include "lib/libft/libft.h"
+/*
+** Outputs the integer 'n' to the given file descriptor.
+*/
 
-typedef struct  s_stack
+void	ft_putnbr_fd(int n, int fd)
 {
-    struct t_stack *next;
-    struct t_stack *prev;
-    int             content; 
-}               t_stack;
+	if (n == -2147483648)
+	{
+		ft_putnbr_fd(-214748364, fd);
+		ft_putchar_fd('8', fd);
+	}
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else
+	{
+		if (n >= 10)
+			ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
+	}
+}
 
-typedef struct  s_push_swap
-{
-    int *a;//a stack
-    int *b;//b stack
-}               t_push_swap;
-
-#endif
+/*
+** line ?? : to solve Seg-falut
+*/

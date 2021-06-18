@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 12:32:08 by napark            #+#    #+#             */
-/*   Updated: 2021/06/17 15:22:06 by napark           ###   ########.fr       */
+/*   Created: 2021/04/11 15:59:03 by napark            #+#    #+#             */
+/*   Updated: 2021/06/17 17:31:47 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
+#include <libft.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include "lib/libft/libft.h"
-
-typedef struct  s_stack
+int		ft_strcmp(const char *s1, const char *s2)
 {
-    struct t_stack *next;
-    struct t_stack *prev;
-    int             content; 
-}               t_stack;
+	int i;
 
-typedef struct  s_push_swap
-{
-    int *a;//a stack
-    int *b;//b stack
-}               t_push_swap;
-
-#endif
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (s1[i] - s2[i]);
+}
