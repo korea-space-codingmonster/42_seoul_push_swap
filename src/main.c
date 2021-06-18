@@ -5,19 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 19:23:35 by napark            #+#    #+#             */
-/*   Updated: 2021/06/17 17:07:08 by napark           ###   ########.fr       */
+/*   Created: 2021/06/18 16:03:25 by napark            #+#    #+#             */
+/*   Updated: 2021/06/18 17:27:10 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int     main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-    t_push_swap     data;
-    char    **check;//최종 stack으로 반환받기 위함
+    t_stack *a;
+	t_stack *b;
+	char	**arg;
 
-    check = check_arg(&argc, argv);//문자열 arg, 개별값 arg값 parsing
-    data.a = set_stack(argc, check);
-    
+	if (argc <= 1)
+		return (0);
+	arg = init_arg(&argc, argv);
+	//a = set_stack(argc, arg);
+	//b = init_stack();
+	//push_swap(a, b, argc);
+	return (0);
 }

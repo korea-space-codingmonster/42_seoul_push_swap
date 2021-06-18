@@ -5,29 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: napark <napark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 12:32:08 by napark            #+#    #+#             */
-/*   Updated: 2021/06/17 15:22:06 by napark           ###   ########.fr       */
+/*   Created: 2021/06/18 16:03:00 by napark            #+#    #+#             */
+/*   Updated: 2021/06/18 17:33:07 by napark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
+#ifndef PUSH_SWAP_H
 
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
-#include "lib/libft/libft.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include "libft.h"
 
-typedef struct  s_stack
-{
-    struct t_stack *next;
-    struct t_stack *prev;
-    int             content; 
-}               t_stack;
+typedef struct 
 
-typedef struct  s_push_swap
-{
-    int *a;//a stack
-    int *b;//b stack
-}               t_push_swap;
+char    **init_arg(int *argc, char **argv);
 
 #endif
